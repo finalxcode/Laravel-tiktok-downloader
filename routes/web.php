@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GetDataController;
-
+use App\Http\Controllers\IndexController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,4 +16,5 @@ use App\Http\Controllers\GetDataController;
 
 Route::get('/', [GetDataController::class, 'getData']);
 Route::post('/getdata', [GetDataController::class, 'getData'])->name('getdata.index');
+Route::post('/index/douyin', [IndexController::class, 'douyin'])->name('douyin.index');
 Route::post('/download', [GetDataController::class, 'downloadVideo'])->name('downloadVideo.download');
